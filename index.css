@@ -9,6 +9,7 @@ body {
     text-shadow: 2px 2px 0px rgba(0,0,0,.2);
     margin-top: 230px;
     height: 100%;
+    overflow: hidden;
 }
 
 time {
@@ -103,6 +104,7 @@ input[type=text]:hover {
     background-size: cover;
     -webkit-filter: blur(6px);
     filter: blur(6px);
+    max-height: 100vh;
 }
 
 #improve {

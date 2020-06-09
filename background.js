@@ -1,4 +1,4 @@
-const body = document.querySelector("body");
+const body = document.querySelector("#background");
 const date = new Date();
 const day = date.getDay();
 
@@ -16,7 +16,7 @@ const accessCode = "3CVHz8RtTUrydWpPKmbmNGlOBnZ4zxn6k2YvNn-bjPw";
 let query = dateQuery[day];
 let i = 0;
 
-const random = Math.ceil(Math.random() * 5);
+const random = Math.ceil(Math.random() * 10);
 
 function bringPhoto() {
     fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=${accessCode}`).then(function(response) {
@@ -28,12 +28,16 @@ function bringPhoto() {
             const imgURL = json.results[random].urls.full;
             const imgAlt = json.results[random].alt_description;
             const imgOwner = json.results[random].user.name;
-            setBackground(imgURL,imgAlt,imgOwner);
+            const imgHeight = json.results[random].height;
+            if (imgHeight >= 6000) {
+                location.reload();
+            }
+            setBackground(imgURL,imgAlt,imgOwner,imgHeight);
         }
     })
 }
 
-function setBackground(src,alt,owner) {
+function setBackground(src,alt,owner,height) {
     const image = new Image();
     const description = document.createElement("span");
     image.src = src;
