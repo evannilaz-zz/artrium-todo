@@ -101,7 +101,6 @@ input[type=text]:hover {
     z-index: -1;
     background-size: cover;
     -webkit-filter: blur(6px);
-    -o-filter: blur(6px);
     filter: blur(6px);
 }
 
