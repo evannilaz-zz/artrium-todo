@@ -14,6 +14,7 @@ Mobile is Unavailable currently. Mobile Version will be released soon- seperatly
 - Link to GitHub
 - Animations
 - Hosting Service Changed: Netlify -> GitHub
+- Using Unsplash API to get Background Photos
 
 ## Checklist
 
