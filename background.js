@@ -16,13 +16,13 @@ const accessCode = "3CVHz8RtTUrydWpPKmbmNGlOBnZ4zxn6k2YvNn-bjPw";
 let query = dateQuery[day];
 let i = 0;
 
-const random = Math.ceil(Math.random() * 10);
+const random = Math.floor(Math.random() * 10);
 
 function bringPhoto() {
     fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=${accessCode}`).then(function(response) {
         return response.json();
     }).then(function(json) {
-        if (json.results[random].urls == undefined) {
+        if (json.results[random] === undefined) {
             setAltBackground();
         } else {
             const imgURL = json.results[random].urls.full;
@@ -34,7 +34,9 @@ function bringPhoto() {
             }
             setBackground(imgURL,imgAlt,imgOwner,imgHeight);
         }
-    })
+    }) // .catch(function(err) {
+    //     location.reload();
+    // })
 }
 
 function setBackground(src,alt,owner,height) {
@@ -43,7 +45,7 @@ function setBackground(src,alt,owner,height) {
     image.src = src;
     image.alt = `${alt}, by ${owner}. Provided by Unsplash.`;
     image.classList.add("background");
-    description.innerText = `${alt}, by ${owner}. Provided by Unsplash.`;
+    description.innerText = `Taken by ${owner}. Provided by Unsplash.`;
     description.style.fontSize = "16px";
     body.appendChild(image);
     body.appendChild(description);
