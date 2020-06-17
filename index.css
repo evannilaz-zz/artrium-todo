@@ -17,7 +17,7 @@ body {
 }
 
 time {
-    font-weight: 800;
+    font-weight: 510;
     font-size: 6rem;
     cursor: pointer;
     display: inline-block;
@@ -37,6 +37,29 @@ time:hover {
     text-decoration: none;
     color: white;
     display: inline-block;
+}
+
+#search {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    margin: 15px;
+    width: 220px;
+    height: 25px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #b2bec3;
+    font-family: -apple-system, "Inter", "Raleway", "Trebuchet MS", sans-serif;
+    font-size: 1rem;
+    color: white;
+    text-shadow: 1px 1px 0px rgba(0,0,0,.2);
+    transition: all .35s ease-in-out;
+}
+
+#search:hover, #search:focus {
+    border-bottom: 1.5px solid white;
+    width: 250px;
 }
 
 .weather {
@@ -61,7 +84,7 @@ button {
     flex-wrap: wrap;
 }
 
-input[type=text] {
+.input {
     display: inline-block;
     border: none;
     background: none;
@@ -77,13 +100,13 @@ input[type=text] {
     margin-top: 50px;
 }
 
-input[type=text]:focus {
+.input[type=text]:focus {
     width: 300px;
     border-bottom: 2px solid white;
     transform: translateY(-15px);
 }
 
-input[type=text]:hover {
+.input[type=text]:hover {
     border-bottom: 2px solid white;
 }
   

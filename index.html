@@ -12,6 +12,9 @@
 
     <body>
         <div id="tintious">
+            <form id="searchForm">
+                <input type="text" autocomplete="off" placeholder="Search Google" id="search">
+            </form>
             <a href="https://github.com/ldhan0715/Tintious" class="link" title="Click to Check Out Source Code." target="_blank">···</a><br>
             <!-- <div class="welcomeId">
                 Hello, welcome to Vindow. What's your ID?
@@ -25,11 +28,11 @@
                 <span class="clock" title="Click To Change Time Format.">00:00</span>
             </time>
             <form class="form">
-                <input type="text" placeholder="What's Your Name?">
+                <input type="text" autocomplete="off" placeholder="What's Your Name?" class="input">
             </form>
             <div class="greetings"></div>
             <form class="toDoForm">
-                <input type="text" autocomplete="off" placeholder="Your Goal Today?">
+                <input type="text" autocomplete="off" placeholder="Your Goal Today?" class="input">
             </form>
             <ul class="toDoList"></ul>
             <span class="weather" title="Geolocation Provided by OpenWeatherMap"></span><br>
@@ -42,6 +45,7 @@
         <script src="background.js"></script>
         <script src="weather.js"></script>
         <script src="disableMobile.js"></script>
+        <script src="search.js"></script>
         <!-- <script src="welcomer.js"></script> -->
     </body>
 </html>

@@ -29,14 +29,11 @@ function bringPhoto() {
             const imgAlt = json.results[random].alt_description;
             const imgOwner = json.results[random].user.name;
             const imgHeight = json.results[random].height;
-            if (imgHeight >= 6000) {
-                location.reload();
-            }
             setBackground(imgURL,imgAlt,imgOwner,imgHeight);
         }
-    }) // .catch(function(err) {
-    //     location.reload();
-    // })
+    }).catch(function(err) {
+        location.reload();
+    })
 }
 
 function setBackground(src,alt,owner,height) {
