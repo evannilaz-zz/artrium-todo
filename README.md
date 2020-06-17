@@ -16,6 +16,7 @@ Mobile is Unavailable currently. Mobile Version will be released soon- seperatly
 - Hosting Service Changed: Netlify -> GitHub
 - Using Unsplash API to get Background Photos
 - Changed Name 'Vindow' to 'Tintious'
+- Google Search Available (beta)
 
 ## Checklist
 
