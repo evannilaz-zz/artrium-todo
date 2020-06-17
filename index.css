@@ -39,12 +39,23 @@ time:hover {
     display: inline-block;
 }
 
+#searchForm>img {
+    position: absolute;
+    width: auto;
+    height: 25px;
+    left: 0;
+    top: 0;
+    margin-top: 17px;
+    margin-left: 10px;
+}
+
 #search {
     position: absolute;
     display: inline-block;
     left: 0;
     top: 0;
     margin: 15px;
+    margin-left: 35px;
     width: 220px;
     height: 25px;
     background: none;
@@ -59,7 +70,7 @@ time:hover {
 
 #search:hover, #search:focus {
     border-bottom: 1.5px solid white;
-    width: 250px;
+    width: 270px;
 }
 
 .weather {
