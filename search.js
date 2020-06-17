@@ -10,5 +10,6 @@ function handleSearch(event) {
 
 function init() {
     searchForm.addEventListener("submit",handleSearch);
-    searchInput.addEventListener("submit", handleSearch);
 }
+
+init();
