@@ -24,3 +24,7 @@ Mobile is Unavailable currently. Mobile Version will be released soon- seperatly
 - [X] 12 Hour Format
 - [X] Login Program (Beta)
 - [ ] Media Query (Mobile)
+
+## Server Operation
+Since my PC is not always on, https://tintious.tk/ may not be always available.
+If the domain is not working, you can try: https://ldhan0715.github.io/tintious .
