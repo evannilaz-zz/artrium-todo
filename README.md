@@ -4,10 +4,6 @@ Tintious is a site that takes the role of "Window".
 It's some kind of Momentum.
 Nothing Interesting.
 
-## !Important
-
-Mobile is Unavailable currently. Mobile Version will be released soon- seperatly.
-
 ## New Features
 
 - 12 Hour Format
@@ -25,6 +21,7 @@ Mobile is Unavailable currently. Mobile Version will be released soon- seperatly
 - [X] Login Program (Beta)
 - [ ] Media Query (Mobile)
 
-## Server Operation
+## Availability
 Since my PC is not always on, https://tintious.tk/ may not be always available.
 If the domain is not working, you can try: https://ldhan0715.github.io/tintious .
+Also, mobile is not available.
