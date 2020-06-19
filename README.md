@@ -12,7 +12,8 @@ Nothing Interesting.
 - Hosting Service Changed: Netlify -> GitHub
 - Using Unsplash API to get Background Photos
 - Changed Name 'Vindow' to 'Tintious'
-- Google Search Available (beta)
+- Google Search Available
+- User Interface Update
 
 ## Checklist
 
