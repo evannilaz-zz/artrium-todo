@@ -1,4 +1,4 @@
-const weather = document.querySelector(".weather");
+const weather = document.querySelector("#weather");
 
 const COORDS = "coords";
 const API = "e16062102e16adcd71e500bea3fb2d37";

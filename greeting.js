@@ -1,43 +1,38 @@
-const form = document.querySelector(".form"),
-  input = form.querySelector("input"),
-  greeting = document.querySelector(".greetings");
+const nameForm = document.querySelector("#nameForm");
+const nameInput = nameForm.querySelector("input");
+const greeting = document.querySelector("#greeting");
 
-const USER_LS = "currentUser",
-  SHOWING_CN = "showing";
+const classHidden = "hidden";
+const usernameLS = "username";
 
-function saveName(text) {
-  localStorage.setItem(USER_LS,text);
+function saveName(username) {
+    localStorage.setItem(usernameLS,username);
 }
 
-function handleSubmit(event) {
-  event.preventDefault();
-  const currentValue = input.value;
-  paintGreeting(currentValue);
-  saveName(currentValue);
+function showGreeting(username) {
+    nameForm.classList.add(classHidden);
+    greeting.classList.remove(classHidden);
+    greeting.innerText = `Such a nice day, ${username}.`;
+}
+
+function handleNameSubmit(event) {
+    event.preventDefault();
+    showGreeting(nameInput.value);
+    saveName(nameInput.value);
 }
 
 function askForName() {
-  form.classList.add(SHOWING_CN);
-  form.addEventListener("submit", handleSubmit);
-}
-
-function paintGreeting(text) {
-  form.classList.remove(SHOWING_CN);
-  greeting.classList.add(SHOWING_CN);
-  greeting.innerText = `Such a Nice Day, ${text}.`;
-}
-
-function loadName() {
-  const currentUser = localStorage.getItem(USER_LS);
-  if (currentUser === null) {
-    askForName();
-  } else {
-    paintGreeting(currentUser);
-  }
+    greeting.classList.add(classHidden);
+    nameForm.addEventListener("submit", handleNameSubmit);
 }
 
 function init() {
-  loadName();
+    const username = localStorage.getItem(usernameLS);
+    if (username == null) {
+        askForName();
+    } else {
+        showGreeting(username);
+    }
 }
 
 init();

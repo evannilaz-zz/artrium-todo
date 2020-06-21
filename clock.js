@@ -1,5 +1,5 @@
 const clockContainer = document.querySelector("time"),
-    clockTitle = clockContainer.querySelector(".clock");
+    clockTitle = clockContainer.querySelector("#clock");
     FORMAT_LS = "12hour";
 
 const defaultFormat = false;

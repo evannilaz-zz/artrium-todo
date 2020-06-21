@@ -1,4 +1,4 @@
-const body = document.querySelector("#background");
+const body = document.querySelector("#tintious");
 const date = new Date();
 const day = date.getDay();
 
@@ -41,7 +41,7 @@ function setBackground(src,alt,owner,height) {
     const description = document.createElement("span");
     image.src = src;
     image.alt = `${alt}, by ${owner}. Provided by Unsplash.`;
-    image.classList.add("background");
+    image.id = "background";
     description.innerText = `Taken by ${owner}. Provided by Unsplash.`;
     description.style.fontSize = "16px";
     body.appendChild(image);
@@ -53,7 +53,7 @@ function setAltBackground() {
     const newRandom = Math.ceil(Math.random() * imgNo);
     const image = new Image();
     image.src = `Images/img${newRandom}.jpg`;
-    image.classList.add("background");
+    image.id = "background";
     body.appendChild(image);
 }
 

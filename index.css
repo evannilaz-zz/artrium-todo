@@ -1,6 +1,6 @@
 body {
     display: flex;
-    background-color: #2c3e50;
+    background-color: #2c2c2c;
     color: white;
     font-size: 2rem;
     font-family: -apple-system, "Inter", "Raleway", "Trebuchet MS", sans-serif;
@@ -60,7 +60,7 @@ time:hover {
     height: 25px;
     background: none;
     border: none;
-    border-bottom: 1px solid #b2bec3;
+    border-bottom: 1.75px solid #b2bec3;
     font-family: -apple-system, "Inter", "Raleway", "Trebuchet MS", sans-serif;
     font-size: 1rem;
     color: white;
@@ -68,12 +68,16 @@ time:hover {
     transition: all .35s ease-in-out;
 }
 
-#search:hover, #search:focus {
-    border-bottom: 1.5px solid white;
-    width: 270px;
+#search:hover {
+    border-bottom: 1.75px solid white;
 }
 
-.weather {
+#search:focus {
+    width: 270px;
+    border-bottom: 1.75px solid white;
+}
+
+#weather {
     font-size: 1rem;
     margin-top: 40px;
 }
@@ -86,7 +90,7 @@ button {
     bottom: 5px;
 }
 
-.toDoList li {
+#toDoList li {
     display: inline-flex;
     list-style: none;
     margin-right: 80px;
@@ -120,39 +124,23 @@ button {
 .input[type=text]:hover {
     border-bottom: 2px solid white;
 }
-  
-.form, .greetings {
+
+.hidden {
     display: none;
 }
-  
-.showing {
-    display: block;
-}
 
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.background {
+#background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    min-height: 100vh;
+    max-height: 150vh;
     z-index: -1;
-    background-size: cover;
     -webkit-filter: blur(6px);
     filter: blur(6px);
-    max-height: 100vh;
-}
-
-#improve {
-    margin-top: 20px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 
 ::-webkit-scrollbar {
@@ -161,4 +149,13 @@ button {
   
 ::-webkit-scrollbar-track {
     background: none;
+}
+
+@keyframes fadeIn {
+    from {
+        filter: blur(0px);
+    }
+    to {
+        filter: blur(6px);
+    }
 }
