@@ -60,7 +60,7 @@ time:hover {
     height: 25px;
     background: none;
     border: none;
-    border-bottom: 1.75px solid rgb(147,150,157);
+    border-bottom: 1.5px solid rgb(147,150,157);
     font-family: -apple-system, "Inter", "Raleway", "Trebuchet MS", sans-serif;
     font-size: 1rem;
     color: white;
@@ -68,13 +68,9 @@ time:hover {
     transition: all .35s ease-in-out;
 }
 
-#search:hover {
-    border-bottom: 1.75px solid white;
-}
-
 #search:focus {
     width: 270px;
-    border-bottom: 1.75px solid white;
+    border-bottom: 1.5px solid white;
 }
 
 #weather {
@@ -103,7 +99,7 @@ button {
     display: inline-block;
     border: none;
     background: none;
-    border-bottom: 2px solid #b2bec3;
+    border-bottom: 1.5px solid #b2bec3;
     width: 250px;
     font-size: 1.3rem;
     font-family: -apple-system, "Inter", "Raleway", "Trebuchet MS", sans-serif;
@@ -117,12 +113,8 @@ button {
 
 .input[type=text]:focus {
     width: 300px;
-    border-bottom: 2px solid white;
+    border-bottom: 1.5px solid white;
     transform: translateY(-15px);
-}
-
-.input[type=text]:hover {
-    border-bottom: 2px solid white;
 }
 
 .hidden {
@@ -135,7 +127,7 @@ button {
     left: 0;
     width: 100%;
     min-height: 100vh;
-    max-height: 150vh;
+    max-height: 170vh;
     z-index: -1;
     -webkit-filter: blur(6px);
     filter: blur(6px);

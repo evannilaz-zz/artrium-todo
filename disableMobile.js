@@ -14,7 +14,7 @@ function clearScreen() {
 
 function checkMobile() {
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        alert("[Alert] Tintious is not for Mobile, but PC. Thank you.");
+        alert("[Alert] Artrium ToDo is not for Mobile, but PC. Thank you.");
         clearScreen();
     }
 }
