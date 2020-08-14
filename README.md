@@ -1,2 +1,2 @@
-# Artrium - ToDo
-Closed, but site operating.
+# Artrium ToDo
+Repo closed, but site operating.
